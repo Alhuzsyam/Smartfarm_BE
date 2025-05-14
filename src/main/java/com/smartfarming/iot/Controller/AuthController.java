@@ -20,7 +20,7 @@ import com.smartfarming.iot.Security.ApiKeyGenerator;
 import com.smartfarming.iot.Security.JwtUtil;
 
 @RestController
-@CrossOrigin(origins = "*")
+@CrossOrigin(origins = "*") // cros origin
 @RequestMapping("/api/auth")
 public class AuthController {
     @Autowired
