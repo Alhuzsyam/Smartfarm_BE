@@ -9,6 +9,7 @@ import com.smartfarming.iot.Data.Model.Relay;
 import com.smartfarming.iot.Service.RelayService;
 
 @RestController
+@CrossOrigin(origins = "*") // cros origins
 @RequestMapping("/api/relay")
 public class RelayController {
 
