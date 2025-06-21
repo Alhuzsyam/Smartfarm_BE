@@ -14,7 +14,7 @@ import java.util.Optional;
 
 public interface SensorRepository extends JpaRepository<Sensor, Long> {
 
-    @Query(value = "SELECT * FROM sensor WHERE code = :code ORDER BY timestamp ASC LIMIT 1", nativeQuery = true)
+    @Query(value = "SELECT * FROM sensor WHERE code = :code ORDER BY timestamp DESC LIMIT 1", nativeQuery = true)
     Optional<Sensor> findLatestByCode(@Param("code") String code);
 
     @Query(value = "SELECT * FROM sensor WHERE code = :code ORDER BY timestamp DESC", nativeQuery = true)
